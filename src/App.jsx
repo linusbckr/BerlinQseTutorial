@@ -110,7 +110,7 @@ export default function App() {
       <div style={{position: 'absolute', top: 16, left: 16, zIndex: 10, width: 300, display: 'flex', flexDirection: 'column', gap: 12}}>
         {/* Title */}
         <div className="rounded-xl border border-white/10 bg-[#161b22]/90 px-4 py-3 backdrop-blur-sm">
-          <h1 className="text-base font-bold tracking-tight text-white">Mietpreis-Explorer</h1>
+          <h1 className="text-base font-bold tracking-tight text-white">Geospatial Explorer</h1>
           <p className="mt-0.5 text-xs text-white/50">Deutschland · PLZ-Ebene · GPU-gerendert</p>
         </div>
 
