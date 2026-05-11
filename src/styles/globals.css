@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-accent: #58a6ff;
+  }
+}
+
+/* MapLibre canvas must fill its container */
+.maplibregl-map { width: 100% !important; height: 100% !important; }
+
+/* Radix Select portal */
+.select-content {
+  @apply z-50 overflow-hidden rounded-lg border border-white/10
+         bg-[#161b22] text-white shadow-2xl;
+  min-width: var(--radix-select-trigger-width);
+  max-height: var(--radix-select-content-available-height, 80vh);
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 100ms ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.97); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.select-item {
+  @apply relative flex cursor-pointer select-none items-center gap-2
+         rounded-sm px-3 py-2 text-sm outline-none
+         data-[highlighted]:bg-white/10;
+}
+
+.select-trigger {
+  @apply flex w-full items-center gap-2 rounded-lg border border-white/20
+         bg-white/5 px-3 py-2 text-sm text-white outline-none
+         hover:border-white/40 focus:border-[--color-accent]
+         transition-colors duration-150 cursor-pointer;
+}
